@@ -579,7 +579,7 @@ function renderChart(display,totAmt,totCnt,yv){
         }
       },
       scales:{
-        x:{beginAtZero:true,ticks:{callback:v=>v+'건',font:{size:10},color:'#888'},grid:{color:'#ECEAE3'}},
+        x:{beginAtZero:true,ticks:{stepSize:1,callback:v=>Number.isInteger(v)?v+'건':null,font:{size:10},color:'#888'},grid:{color:'#ECEAE3'}},
         y:{ticks:{font:{size:11},color:'#444'},grid:{display:false}}
       }
     }
